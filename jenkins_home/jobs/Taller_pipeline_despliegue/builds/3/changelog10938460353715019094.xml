@@ -1,0 +1,10 @@
+commit 2a93e386f54af201394b133d2df69a07636f05c8
+tree 0c5c01f0232c4ff9a8ed1523ca4501da8cb1f2b2
+parent be695b73b79e1e895b069af2a64476dbe332fd55
+author CarielR <acrdkr@gmail.com> 2025-07-01 11:20:08 -0500
+committer CarielR <acrdkr@gmail.com> 2025-07-01 11:20:08 -0500
+
+    change Jenkinfile
+
+
+:100644 100644 fe6b3506a822a0d8456e4429f5a7468f6f37c03a 0529fe6b23f3f79d7891767e0ee628819e35bb34 M	Jenkinsfile

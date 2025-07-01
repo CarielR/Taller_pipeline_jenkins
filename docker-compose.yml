@@ -2,15 +2,18 @@ version: '3.8'
 
 services:
   jenkins:
-    image: jenkins/jenkins:lts
+    build:
+      context: ./jenkins-custom
+    image: jenkins-with-docker:latest
     container_name: jenkins
+    user: root                      # corre el proceso como root
     ports:
       - "8080:8080"
       - "50000:50000"
     volumes:
       - ./jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock
-      - /usr/bin/docker:/usr/bin/docker
+      # Mount del named pipe de Docker Desktop de Windows
+      - //./pipe/docker_engine:/var/run/docker.sock
     restart: unless-stopped
 
   web:
